@@ -5,6 +5,11 @@ class Node
 public:
     int data;
     Node *next;
+    Node (int val)
+    {
+        data=val;
+        next=NULL;
+    }
 };
 
 bool checkcycle(Node *head)
@@ -26,9 +31,9 @@ Node *insert(Node *head)
 {
     int new_data;
     cin >> new_data;
-    struct Node *p = (struct Node *)malloc(sizeof(struct Node));
-    p->data = new_data;
-    p->next = NULL;
+    struct Node *p = new Node(new_data);
+    //  p->data = new_data;
+    //  p->next = NULL;
     Node *ptr;
     if (head == NULL)
     {
@@ -63,7 +68,6 @@ int main()
     {
         head = insert(head);
     }  
-    cout<<checkcycle(head)<<endl;
     linkedListTraversal(head);
     return 0;
 }

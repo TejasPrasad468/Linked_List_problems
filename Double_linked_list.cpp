@@ -33,13 +33,12 @@ Node *insert(Node *head)
 void linkedListTraversal(Node *ptr)
 {
     cout<<"For next"<<endl;
-    cout<<ptr->data<<endl;
-    ptr=ptr->next;
-    while (ptr != NULL)
+    do
     {
         cout << ptr->data << endl;
         ptr = ptr->next;
     }
+    while (ptr != NULL);
 }
 
 Node* reverseDLL(Node * head)
